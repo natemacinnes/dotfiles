@@ -27,3 +27,7 @@ MSG
 fi
 
 unset _old_path
+
+# strap:strapenv:begin
+[ -r "$HOME/.strap/etc/strapenv" ] && . "$HOME/.strap/etc/strapenv"
+# strap:strapenv:end

@@ -27,3 +27,16 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+	tool = vimdiff
+[user]
+	name = Nate MacInnes
+	email = nate.macinnes@okta.com
+[config]
+	email = nate.macinnes@okta.com
+	username = natemacinnes-okta
+[branch]
+	autosetupmerge = always
+[credential]
+	helper = store
+[github]
+	user = natemacinnes-okta

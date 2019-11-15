@@ -39,3 +39,24 @@ _load_settings "$HOME/.zsh/configs"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:/opt/yarn-[version]/bin"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/natemacinnes/.nvm/versions/node/v10.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/natemacinnes/.nvm/versions/node/v10.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/natemacinnes/.nvm/versions/node/v10.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/natemacinnes/.nvm/versions/node/v10.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/natemacinnes/.nvm/versions/node/v10.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/natemacinnes/.nvm/versions/node/v10.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+# strap:straprc:begin
+[ -r "$HOME/.strap/etc/straprc" ] && . "$HOME/.strap/etc/straprc"
+# strap:straprc:end
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/natemacinnes/.sdkman"
+[[ -s "/Users/natemacinnes/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/natemacinnes/.sdkman/bin/sdkman-init.sh"
